@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+     <link rel="stylesheet" href="index4.css">
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="opencity(event,'hello')"></button>
+        <button class="tablinks" onclick="opencity(event,'welcome ')"></button>
+        <button class="tablinks" onclick="opencity(event,'webdevlopment')"></button>
+    </div>
+    <div class="tabcontent" id="hello">
+        <h3>Tab1</h3>
+        <p>hello</p>
+    </div>
+    <div class="tabcontent" id="welcome">
+        <h3>Tab2</h3>
+        <p>welcome</p>
+    </div>
+    <div class="tabcontent" id="webdevlopment">
+        <h3>Tab3</h3>
+        <p>webdevelopment</p>
+    </div>
+    <script>
+     function openCity(evt, cityName) {
+         var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("tabcontent");
+           for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+  }
+           tablinks = document.getElementsByClassName("tablinks");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+                 document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
